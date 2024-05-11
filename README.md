@@ -3,6 +3,8 @@
 ## Descrição do Projeto
 Este projeto consiste em um Gerador de Documentação Automática para arquivos README.md. Utilizando a API do Google Gemini, a ferramenta analisa código fonte fornecido pelo usuário e gera um arquivo README.md completo e bem estruturado, facilitando a documentação de projetos de software.
 
+![Gif Readme Generator](https://i.imgur.com/YBdLKBy.gif "Gif Readme Generator")
+
 ## Funcionalidades
 - Geração automática de arquivos README.md a partir de código fonte.
 - Análise de código em diversas linguagens de programação (Python, JavaScript, Java, C++, C, HTML, CSS).
