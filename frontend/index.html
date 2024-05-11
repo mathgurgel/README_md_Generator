@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>README Generator</title>
+    <title>GERADOR DE README</title>
   </head>
   <body>
     <header>
-      <h1 id="banner">README GENERATOR</h1>
+      <h1 id="banner">GERADOR DE README</h1>
       <img id="logo-imersao" src="https://cursos.alura.com.br/assets/images/immersion/imersao_ia_google_logo.png">
     </header>
     <main>
       <form id="readme-form">
-        <label for="project-name">Project Name:</label>
+        <label for="project-name">Nome do Projeto:</label>
         <input type="text" id="project-name" required />
 
-        <label for="project-description">Brief Description:</label>
+        <label for="project-description">Breve Descrição:</label>
         <textarea id="project-description" rows="4" required></textarea>
 
-        <label for="project-path">Project Path:</label>
+        <label for="project-path">Diretório do Projeto:</label>
         <input type="text" id="project-path" required />
 
-        <label for="additional-details">Additional Details (Optional):</label>
+        <label for="additional-details">Detalhes Adicionais:</label>
         <textarea id="additional-details" rows="4"></textarea>
 
-        <button type="button" onclick="sendData()">Send</button>
+        <button type="button" onclick="sendData()">Enviar</button>
       </form>
 
       <a id="download-link" href="#" download="README.md">

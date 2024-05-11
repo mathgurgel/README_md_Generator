@@ -57,27 +57,25 @@ def generate_documentation(
 
     # Prepare the prompt for the Gemini API
     prompt = str(
-        f"""begin:
-Generate comprehensive project documentation based on the following information:
+        f"""
+            Gere uma documentação abrangente em Markdown para o projeto com base nas seguintes informações:
 
-Project Name: {project_name}
-Project Description: {project_description}
-Additional details: {project_details or ''}
+            Nome do Projeto: {project_name}
+            Descrição do Projeto: {project_description}
+            Detalhes adicionais: {project_details or ''}
 
+            Garanta que a documentação seja bem estruturada, informativa e fácil de entender tanto para o público técnico, quanto para o não técnico.
 
-Ensure the documentation is well-structured, informative, and easy to understand for both technical and non-technical audiences.
+            Considerações adicionais:
 
-Additional Considerations:
+            - Utilize linguagem clara e concisa.
+            - Mantenha um estilo e formatação consistentes em todo o documento.
+            - Considere as necessidades específicas do público-alvo.
 
-* Use clear and concise language.
-* Include visuals such as diagrams and screenshots where appropriate.
-* Maintain a consistent style and formatting throughout the document.
-* Consider the specific needs of the target audience.
+            Código:
 
-Code:
-
-{code_content}
-"""
+            {code_content}
+        """
     )
 
     # Send the request to the Gemini API
