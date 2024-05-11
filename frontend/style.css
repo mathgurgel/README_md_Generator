@@ -1,26 +1,46 @@
-/* Add your custom styles here */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #101926;
 }
 
 header {
-  background-color: #333;
-  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #ebfcff;
   text-align: center;
   padding: 1rem;
+  height: 15vh;
+}
+
+#banner {
+  height: 50%;
+  margin-bottom: 5px;
+}
+
+#logo-imersao {
+  margin-top: 0px;
+  height: 50%;
 }
 
 main {
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
+  height: 85vh;
 }
 
 form {
   display: grid;
   gap: 1rem;
+  color: #ebfcff
 }
 
 label {
@@ -31,13 +51,15 @@ textarea,
 input {
   width: 100%;
   padding: 0.5rem;
+  color: #ebfcff;
   border: 1px solid #ccc;
   border-radius: 4px;
+  background-color: rgba(9, 45, 93, .5019607843137255);
 }
 
 button {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #7871ff;
+  color: #ebfcff;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -46,6 +68,6 @@ button {
 }
 
 button:disabled {
-  background-color: #ccc;
+  background-color: #24224b;
   cursor: not-allowed;
 }

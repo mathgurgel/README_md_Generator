@@ -8,20 +8,21 @@
   </head>
   <body>
     <header>
-      <h1>README GENERATOR</h1>
+      <h1 id="banner">README GENERATOR</h1>
+      <img id="logo-imersao" src="https://cursos.alura.com.br/assets/images/immersion/imersao_ia_google_logo.png">
     </header>
     <main>
       <form id="readme-form">
         <label for="project-name">Project Name:</label>
         <input type="text" id="project-name" required />
 
-        <label for="project-description">Project Description:</label>
+        <label for="project-description">Brief Description:</label>
         <textarea id="project-description" rows="4" required></textarea>
 
         <label for="project-path">Project Path:</label>
         <input type="text" id="project-path" required />
 
-        <label for="additional-details">Additional Details:</label>
+        <label for="additional-details">Additional Details (Optional):</label>
         <textarea id="additional-details" rows="4"></textarea>
 
         <button type="button" onclick="sendData()">Send</button>
