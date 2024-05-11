@@ -14,7 +14,9 @@ function sendData() {
     url.searchParams.append("project_directory", projectPath);
     url.searchParams.append("project_name", projectName);
     url.searchParams.append("project_description", projectDescription);
-    // Additional details are not appended to the URL because they are optional for GET requests
+    if (additionalDetails) {
+      url.searchParams.append("additional_details", additionalDetails);
+    }
   
     // Send GET request to the backend
     fetch(url, {
@@ -35,3 +37,6 @@ function sendData() {
       .catch((error) => console.error("Error sending data:", error));
   }
   
+function hideButton() {
+  document.getElementById("download-button").setAttribute("disabled", true);
+}

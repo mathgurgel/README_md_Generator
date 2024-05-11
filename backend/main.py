@@ -27,7 +27,7 @@ def generate_documentation(
     project_directory: str,
     project_name: str,
     project_description: str,
-    project_details: Optional[str] = None
+    additional_details: Optional[str] = None
 ) -> None:
     
     """
@@ -37,10 +37,10 @@ def generate_documentation(
         project_directory: Path to the project directory containing code files.
         project_name: Name of the project.
         project_description: Brief description of the project.
-        project_details: Optional additional details about the project.
+        additional_details: Optional additional details about the project.
     """
 
-    GOOGLE_API_KEY = "place-your-google-api-key-here"
+    GOOGLE_API_KEY = "coloque sua api do google ai aqui"
     genai.configure(api_key=GOOGLE_API_KEY)
 
     model = genai.GenerativeModel(model_name='gemini-1.5-pro-latest')
@@ -49,7 +49,7 @@ def generate_documentation(
     code_content = ""
     for root, _, files in os.walk(project_directory):
         for filename in files:
-            if not filename.endswith((".py", ".js", ".java", ".cpp", ".c", ".html", ".css")):
+            if not filename.endswith((".py", ".js", ".java", ".cpp", ".c", ".html", ".css", ".rb", ".swift", ".php", ".pl", ".r", ".lua", ".sh", ".scala", ".kt", ".ts", ".dart", ".asm", ".hs")):
                 continue  # Process only relevant code files
             filepath = os.path.join(root, filename)
             with open(filepath, "r", encoding="utf-8") as f:
@@ -62,15 +62,17 @@ def generate_documentation(
 
             Nome do Projeto: {project_name}
             Descrição do Projeto: {project_description}
-            Detalhes adicionais: {project_details or ''}
+            Detalhes adicionais: {additional_details or 'nenhum'}
 
-            Garanta que a documentação seja bem estruturada, informativa e fácil de entender tanto para o público técnico, quanto para o não técnico.
+            Garanta que a documentação seja bem estruturada, informativa e fácil de entender tanto para um público técnico, quanto para um não técnico.
 
             Considerações adicionais:
 
             - Utilize linguagem clara e concisa.
             - Mantenha um estilo e formatação consistentes em todo o documento.
             - Considere as necessidades específicas do público-alvo.
+            - Não inclua o código fonte na documentação.
+            - Inclua como rodar o backend (se houver um) da aplicação (considere a documentação do framework utilizado) e como acessar a página web (se houver uma) pelo arquivo html.
 
             Código:
 
